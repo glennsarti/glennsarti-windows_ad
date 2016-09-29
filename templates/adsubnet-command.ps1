@@ -3,7 +3,7 @@ $VerbosePreference = 'Continue'
 
 $SubnetName = '<%= @name %>'
 $SubnetLocation = '<%= @location %>'
-$SubnetSiteName = '<%= @site %>'
+$SubnetSiteName = '<%= @site_name %>'
 $EnsureType = '<%= @ensure %>'
 
 Import-Module ActiveDirectory -Verbose:$false

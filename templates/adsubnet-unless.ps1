@@ -3,13 +3,8 @@ $VerbosePreference = 'Continue'
 
 $SubnetName = '<%= @name %>'
 $SubnetLocation = '<%= @location %>'
-$SubnetSiteName = '<%= @site %>'
+$SubnetSiteName = '<%= @site_name %>'
 $EnsureType = '<%= @ensure %>'
-
-#$SubnetName = '192.168.200.0/24'
-#$SubnetLocation = 'US/OR/Portland'
-#$SubnetSiteName = 'PDX'
-#$EnsureType = 'present'
 
 Import-Module ActiveDirectory -Verbose:$false
 

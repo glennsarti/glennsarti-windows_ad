@@ -17,7 +17,7 @@ try {
 if ($EnsureType.ToUpper() -eq 'PRESENT') {
   if ($thisSiteLink -eq $null) {
     Write-Verbose "Creating the SiteLink object called $SiteLinkName"
-    $thisSiteLink = New-ADReplicationSiteLink -Name $SiteLinkName -SitesIncluded $Sites
+    $thisSiteLink = New-ADReplicationSiteLink -Name $SiteLinkName -SitesIncluded ($Sites -split ',')
   }
 
   Write-Host "Setting site cost to $Cost and replication interval to $ReplicationInterval"

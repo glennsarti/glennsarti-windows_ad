@@ -15,11 +15,11 @@ define windows_ad::trust::external(
   validate_re($direction, '^(inbound|outbound)$', 'ensure must be one of \'inbound\' or \'outbound\'')
 
   if $facts['msad_is_fsmo_pdc_role_owner'] == 'True' {
-    #exec { "ad_site_$name":
-    #  command   => template('windows_ad/adtrustexternal-command.ps1'),
-    #  unless    => template('windows_ad/adtrustexternal-unless.ps1'),
-    #  provider  => powershell,
-    #  logoutput => $logoutput,
-    #}
+    exec { "ad_site_$name":
+      command   => template('windows_ad/adtrustexternal-command.ps1'),
+      unless    => template('windows_ad/adtrustexternal-unless.ps1'),
+      provider  => powershell,
+      logoutput => $logoutput,
+    }
   }
 }

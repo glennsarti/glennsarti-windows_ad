@@ -7,10 +7,6 @@ $Cost = '<%= @cost %>'
 $ReplicationInterval = '<%= @replication_interval %>'
 $EnsureType = '<%= @ensure %>'
 
-#$SiteLinkName = 'Portland-SanDiego'
-#$Sites = 'Portland,SanDiego'
-#$EnsureType = 'present'
-
 Import-Module ActiveDirectory -Verbose:$false
 
 # Exit Code 1 means the command will be executed

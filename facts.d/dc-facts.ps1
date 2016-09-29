@@ -5,7 +5,8 @@ $factPrefix = "msad_"
 $isDC = "False"
 $thisComputer = Get-WMIObject Win32_ComputerSystem
 switch (($thisComputer).domainrole) {
-  5 { $isDC = "True" }
+  4 { $isDC = "True" } # Legacy BDC
+  5 { $isDC = "True" } # Legacy PDC
 }
 
 Write-Output "$($factPrefix)is_domain_controller=$isDC"
