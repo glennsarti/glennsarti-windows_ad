@@ -44,4 +44,4 @@ if ($isDC -eq 'True') {
     Write-Output "$($factPrefix)is_fsmo_infrastructure_role_owner=$($thisDomain.InfrastructureRoleOwner.ToString().ToLower() -eq $thisDCName)"
   }
 }
-if ($thisDomain -ne '') { Write-Output "$($factPrefix)domain_name=$($thisDomain)" }
+if ($thisDomainName -ne '') { Write-Output "$($factPrefix)domain_name=$($thisDomainName)" }
